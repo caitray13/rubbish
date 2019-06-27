@@ -103,7 +103,7 @@ model = tf.keras.Sequential([
   tf.keras.layers.Conv2D(32, 3, activation='relu'),
   tf.keras.layers.Dropout(0.2),
   tf.keras.layers.GlobalAveragePooling2D(),
-  tf.keras.layers.Dense(6, activation='softmax')
+  tf.keras.layers.Dense(3, activation='softmax')
 ])
 
 
@@ -130,7 +130,7 @@ print('Number of trainable variables = {}'.format(len(model.trainable_variables)
 # In[37]:
 
 
-epochs = 10
+epochs = 100
 
 history = model.fit(train_generator,
                     epochs=epochs,
@@ -210,7 +210,7 @@ print('Number of trainable variables = {}'.format(len(model.trainable_variables)
 
 
 history_fine = model.fit(train_generator, 
-                         epochs=5,
+                         epochs=100,
                          validation_data=val_generator)
 
 
