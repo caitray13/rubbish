@@ -130,7 +130,7 @@ print('Number of trainable variables = {}'.format(len(model.trainable_variables)
 # In[37]:
 
 
-epochs = 100
+epochs = 50
 
 history = model.fit(train_generator,
                     epochs=epochs,
@@ -210,7 +210,7 @@ print('Number of trainable variables = {}'.format(len(model.trainable_variables)
 
 
 history_fine = model.fit(train_generator, 
-                         epochs=100,
+                         epochs=50,
                          validation_data=val_generator)
 
 
